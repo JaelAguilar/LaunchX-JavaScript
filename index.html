@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Pokedex</title>
 </head>
 <body>
-    <h1>Pokedex</h1>
+    <div class="header"><h1>Pokedex</h1></div>
+    <div class="pokedex">
+        <div class="pantalla-izquierda"></div>
+        <div class="pantalla-derecha"></div>
+    </div>
+
+
+
     <input type="text" name="pokeName" id="pokeName" placeholder="pikachu"><br>
     <img src="img/Pokeball.png" alt="pokemon" width="150px" id="pokeImage"><br>
     <button onclick="fetchPokemon()">Cambiar pokemon</button>
+    <div class="footer">Hecho por <a href="https://github.com/JaelAguilar">Jael Aguilar</a></div>
 </body>
 <script src="script.js"></script>
 </html>

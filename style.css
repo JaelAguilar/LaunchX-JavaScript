@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Red+Hat+Mono:wght@300;400;500;600;700&display=swap');
+
+/* https://coolors.co/00fbfa-ffcd03-b1b1b0-519afb-630211-dd092e-2ef801 */
+
+*{
+    box-sizing:border-box;
+    font-family: 'Red Hat Mono', monospace;
+}
+
+/* ==== Componentes HTML ==== */
+
+body{
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    height: 100vh;
+    background-color:#630211;
+}
+h1{
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* ==== Header ==== */
+.header{
+    background-color: #DD092E;
+    text-align:center;
+}

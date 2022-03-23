@@ -1,14 +1,27 @@
 let pokeImage
-let imageFront=document.getElementById("pokeImage")
-const fetchPokemon = () => {
-    url = `https://pokeapi.co/api/v2/pokemon/ditto`
+const imageFront = document.getElementById("pokeImage")
+const nameInput = document.getElementById("pokeName").value.toLowerCase()
+const fetchPokemon = (pokemon) => {
+    let url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
     fetch(url)
-        .then(response => {return response.json()})
+        .then(response => {
+            console.log(typeof response.status)
+            if (response.status != 200) {
+                changeImage("img/Error.gif")
+            }
+            else {
+                return res.json()
+            }
+        })
         .then(data => {
-            pokeImage = data.sprites.front_shiny
-            console.log(pokeImage)
-            imageFront.src=pokeImage
+            if (data) {
+                pokeImage = data.sprites.front_default
+                changeImage(pokeImage)
+            }
+            
         })
 }
 
-fetchPokemon()
+function changeImage(url) {
+    imageFront.src = url
+}

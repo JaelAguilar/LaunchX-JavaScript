@@ -10,14 +10,36 @@
 <body>
     <div class="header"><h1>Pokedex</h1></div>
     <div class="pokedex">
-        <div class="pantalla-izquierda"></div>
-        <div class="pantalla-derecha"></div>
+        <div class="pantalla-izquierda">
+            <div class="botones-superiores">
+                <div class="boton-celeste-superior"></div>
+                <div class="hilera-botones-superior">
+                    <div class="boton-rojo-superior"></div>
+                    <div class="boton-amarillo-superior"></div>
+                    <div class="boton-verde-superior"></div>
+                </div>
+            </div>
+            <div class="imageContainer">
+                <img src="img/Pokeball.png" alt="pokemon" width="150px" height="150px" id="pokeImage">
+            </div>
+            
+        </div>
+        <div class="pantalla-derecha">
+            <div class="botones-superiores">
+                <div class="boton-celeste-superior"></div>
+                <div class="hilera-botones-superior">
+                    <div class="boton-rojo-superior"></div>
+                    <div class="boton-amarillo-superior"></div>
+                    <div class="boton-verde-superior"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
 
     <input type="text" name="pokeName" id="pokeName" placeholder="pikachu"><br>
-    <img src="img/Pokeball.png" alt="pokemon" width="150px" id="pokeImage"><br>
+    <br>
     <button onclick="fetchPokemon()">Cambiar pokemon</button>
     <div class="footer">Hecho por <a href="https://github.com/JaelAguilar">Jael Aguilar</a></div>
 </body>

@@ -20,8 +20,6 @@ h1{
 img{
     display:block;
     background-color:white;
-    border:2px solid black;
-    border-radius:1vh;
 }
 /* ==== Header ==== */
 .header{
@@ -31,6 +29,11 @@ img{
 }
 
 /* ==== Pokedex ==== */
+.pokedexContainer{
+    width:100vw;
+    display:flex;
+    justify-content:center;
+}
 .pokedex{
     display:flex;
     flex-wrap:wrap;
@@ -72,10 +75,19 @@ img{
 
 
 /*! ==== Pantalla ==== */
-.imageContainer{
+.displayContainer{
     background-color:#B1B1B0;
-    padding:1vh;
+    padding:max(1vh,6px);
     border-radius: 1vh;
+}
+.display-izquierda,.display-derecha{
+    border:2px solid black;
+    border-radius:1vh;
+    width:max(35vw,200px);
+    height:max(35vw,200px)
+}
+.display-derecha{
+    background-color:#2EF801;
 }
 
 /* ==== Footer ====*/

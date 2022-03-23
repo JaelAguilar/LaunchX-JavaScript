@@ -1,25 +1,36 @@
-let pokeImage
 const imageFront = document.getElementById("pokeImage")
-const nameInput = document.getElementById("pokeName").value.toLowerCase()
-const fetchPokemon = (pokemon) => {
+const nameInput = document.getElementById("pokeName")
+const weightStat=document.getElementById("weight")
+console.log(document.getElementById("pokeName"))
+
+
+const fetchPokemon = () => {
+    let information = {}
+    let pokemon= nameInput.value.toLowerCase()
     let url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
+
     fetch(url)
         .then(response => {
-            console.log(typeof response.status)
             if (response.status != 200) {
                 changeImage("img/Error.gif")
             }
             else {
-                return res.json()
+                return response.json()
             }
         })
         .then(data => {
             if (data) {
-                pokeImage = data.sprites.front_default
-                changeImage(pokeImage)
+                information.image = data.sprites.front_default
+                information.weight=data.weight
+                changeData(information)
             }
             
         })
+}
+
+function changeData(information) {
+    changeImage(information.image)
+    weightStat.textContent+=information.weight
 }
 
 function changeImage(url) {

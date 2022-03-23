@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="header"><h1>Pokedex</h1></div>
+    <div class="pokedexContainer">
     <div class="pokedex">
         <div class="pantalla-izquierda">
             <div class="botones-superiores">
@@ -19,8 +20,8 @@
                     <div class="boton-verde-superior"></div>
                 </div>
             </div>
-            <div class="imageContainer">
-                <img src="img/Pokeball.png" alt="pokemon" width="150px" height="150px" id="pokeImage">
+            <div class="displayContainer">
+                <img src="img/Pokeball.png" alt="pokemon" id="pokeImage" class="display-izquierda">
             </div>
             
         </div>
@@ -33,7 +34,19 @@
                     <div class="boton-verde-superior"></div>
                 </div>
             </div>
+            <div class="displayContainer">
+                <div class="display-derecha">
+                    <div class="info-displayed">
+                        <p id="name"><b>Nombre: </b></p>
+                        <p id="types"><b>Tipo: </b></p>
+                        <p id="height"><b>Altura: </b></p>
+                        <p id="weight"><b>Peso: </b></p>
+                        <p id="species"><b>Especie: </b></p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
     </div>
 
 

@@ -35,7 +35,7 @@ const fetchPokemon = () => {
 function changeData(information) {
     changeImage(information.sprites.front_default)
     weightStat.innerHTML = `<b>Weight: </b>${information.weight} hg`
-    nameStat.innerHTML = `<b>Name: </b>${information.name}`
+    nameStat.innerHTML = information.name
     /*information.types.forEach(type => {
         typeStat.textContent +=type.type.name+"..."
     });*/

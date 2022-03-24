@@ -132,6 +132,12 @@ button{
     border:2px solid black;
     border-bottom: 0;
 }
+#info-displayed{
+    display:none;
+}
+#info-displayed.active{
+    display:block;
+}
 
 /* ==== Footer ====*/
 .footer{

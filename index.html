@@ -10,50 +10,50 @@
 <body>
     <div class="header"><h1>Pokedex</h1></div>
     <div class="pokedexContainer">
-    <div class="pokedex">
-        <div class="pantalla-izquierda">
-            <div class="botones-superiores">
-                <div class="boton-celeste-superior"></div>
-                <div class="hilera-botones-superior">
-                    <div class="boton-rojo-superior"></div>
-                    <div class="boton-amarillo-superior"></div>
-                    <div class="boton-verde-superior"></div>
+        <div class="pokedex">
+            <div class="pantalla-izquierda">
+                <div class="botones-superiores">
+                    <div class="boton-celeste-superior"></div>
+                    <div class="hilera-botones-superior">
+                        <div class="boton-rojo-superior"></div>
+                        <div class="boton-amarillo-superior"></div>
+                        <div class="boton-verde-superior"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="displayContainer">
-                <img src="img/Pokeball.png" alt="pokemon" id="pokeImage" class="display-izquierda">
-            </div>
+                <div class="displayContainer">
+                    <img src="img/Pokeball.png" alt="pokemon" id="pokeImage" class="display-izquierda">
+                </div>
+                <input type="text" name="pokeName" id="pokeName" placeholder="pikachu">
+                <button onclick="fetchPokemon()">Cambiar pokemon</button>
             
-        </div>
-        <div class="pantalla-derecha">
-            <div class="botones-superiores">
-                <div class="boton-celeste-superior"></div>
-                <div class="hilera-botones-superior">
-                    <div class="boton-rojo-superior"></div>
-                    <div class="boton-amarillo-superior"></div>
-                    <div class="boton-verde-superior"></div>
-                </div>
             </div>
-            <div class="displayContainer">
-                <div class="display-derecha greenDisplay">
-                    <div class="info-displayed">
-                        <p id="name"><b>Nombre: </b></p>
-                        <p id="types"><b>Tipo: </b></p>
-                        <p id="height"><b>Altura: </b></p>
-                        <p id="weight"><b>Peso: </b></p>
-                        <p id="species"><b>Especie: </b></p>
+            <div class="pantalla-derecha">
+                <div class="botones-superiores">
+                    <div class="boton-celeste-superior"></div>
+                    <div class="hilera-botones-superior">
+                        <div class="boton-rojo-superior"></div>
+                        <div class="boton-amarillo-superior"></div>
+                        <div class="boton-verde-superior"></div>
+                    </div>
+                </div>
+                <div class="displayContainer">
+                    <div class="display-derecha greenDisplay">
+                        <div class="info-displayed">
+                            <p id="name"><b>Nombre: </b></p>
+                            <p id="types"><b>Tipo: </b></p>
+                            <p id="height"><b>Altura: </b></p>
+                            <p id="weight"><b>Peso: </b></p>
+                            <p id="species"><b>Especie: </b></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
 
 
 
-    <input type="text" name="pokeName" id="pokeName" placeholder="pikachu"><br>
-    <br>
-    <button onclick="fetchPokemon()">Cambiar pokemon</button>
+    
     <div class="footer">Hecho por <a href="https://github.com/JaelAguilar">Jael Aguilar</a></div>
 </body>
 <script src="script.js"></script>

@@ -1,7 +1,11 @@
 const imageFront = document.getElementById("pokeImage")
 const nameInput = document.getElementById("pokeName")
-const weightStat=document.getElementById("weight")
-console.log(document.getElementById("pokeName"))
+const weightStat = document.getElementById("weight")
+const nameStat = document.getElementById("name")
+const typeStat = document.getElementById("types")
+const heightStat= document.getElementById("height")
+const speciesStat = document.getElementById("species")
+
 
 
 const fetchPokemon = () => {
@@ -20,17 +24,22 @@ const fetchPokemon = () => {
         })
         .then(data => {
             if (data) {
-                information.image = data.sprites.front_default
-                information.weight=data.weight
-                changeData(information)
+                console.log(data)
+                changeData(data)
+
             }
             
         })
 }
 
 function changeData(information) {
-    changeImage(information.image)
-    weightStat.textContent+=information.weight
+    changeImage(information.sprites.front_default)
+    weightStat.innerHTML = `<b>Weight: </b>${information.weight} hg`
+    nameStat.innerHTML = `<b>Name: </b>${information.name}`
+    /*information.types.forEach(type => {
+        typeStat.textContent +=type.type.name+"..."
+    });*/
+    heightStat.innerHTML = `<b>Height: </b>${information.height} dm`
 }
 
 function changeImage(url) {

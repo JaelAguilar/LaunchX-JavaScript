@@ -21,6 +21,11 @@ img{
     display:block;
     background-color:white;
 }
+
+/* ==== Características ==== */
+.greenDisplay{
+    background-color:#2EF801;
+}
 /* ==== Header ==== */
 .header{
     background-color: #F5143A ;
@@ -30,22 +35,28 @@ img{
 
 /* ==== Pokedex ==== */
 .pokedexContainer{
-    width:100vw;
+    width:100%;
     display:flex;
     justify-content:center;
 }
 .pokedex{
     display:flex;
     flex-wrap:wrap;
+    gap:1vmax;
+    padding:2vw;
+    justify-content:center;
 }
 .pantalla-izquierda,.pantalla-derecha{
     background-color:#DD092E;
+    padding:5vw;
+    width:max(35vw,60vmin);
 }
 
 /*! ==== Botones superiores ===== */
 .botones-superiores{
     display:flex;
     gap:10px;
+    padding-bottom:1vw;
 }
 .boton-celeste-superior{
     border-radius: 50%;
@@ -82,12 +93,10 @@ img{
 }
 .display-izquierda,.display-derecha{
     border:2px solid black;
-    border-radius:1vh;
-    width:max(35vw,200px);
-    height:max(35vw,200px)
+    border-radius:1vh; 
 }
-.display-derecha{
-    background-color:#2EF801;
+.display-izquierda{
+    width:100%;
 }
 
 /* ==== Footer ====*/

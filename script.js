@@ -9,7 +9,6 @@ const infoBlock = document.getElementById("info-displayed")
 
 
 const fetchPokemon = () => {
-    let information = {}
     let pokemon= nameInput.value.toLowerCase()
     let url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
     changeImage("img/loading.gif")
@@ -37,9 +36,10 @@ function changeData(information) {
     changeImage(information.sprites.front_default)
     weightStat.innerHTML = `<b>Weight: </b>${information.weight} hg`
     nameStat.innerHTML = information.name
-    /*information.types.forEach(type => {
-        typeStat.textContent +=type.type.name+"..."
-    });*/
+    information.types.forEach(type => {
+        console.log(type.type.name)
+        createTag(typeStat, type.type.name)
+    });
     heightStat.innerHTML = `<b>Height: </b>${information.height} dm`
     infoBlock.classList.add("active")
 }
@@ -48,8 +48,9 @@ function changeImage(url) {
     imageFront.src = url
 }
 
-function createTag(block,content) {
-    let tag = document.createElement("div")
+function createTag(block, content) {
+    deleteTags(block)
+    let tag = document.createElement("span")
     tag.classList.add("tag")
     tag.innerText=content
     let color = "#"
@@ -58,4 +59,9 @@ function createTag(block,content) {
     }
     tag.style.backgroundColor=color
     block.appendChild(tag)
+}
+
+function deleteTags(block) {
+    let tags = [...block.getElementsByClassName("tag")]
+    tags.forEach(tag => { tag.remove() })
 }

@@ -47,3 +47,15 @@ function changeData(information) {
 function changeImage(url) {
     imageFront.src = url
 }
+
+function createTag(block,content) {
+    let tag = document.createElement("div")
+    tag.classList.add("tag")
+    tag.innerText=content
+    let color = "#"
+    for (let i = 0; i < 6; i++) {
+        color+=Math.floor(Math.random()*10);
+    }
+    tag.style.backgroundColor=color
+    block.appendChild(tag)
+}

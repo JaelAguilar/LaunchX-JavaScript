@@ -10,10 +10,12 @@
 }
 
 /* ==== Componentes HTML ==== */
-body,h2,p{
+body,h2{
     margin:0;
 }
-
+p{
+    margin:.5em 0;
+}
 body{
     background-color:#630211;
 }
@@ -48,6 +50,9 @@ button{
     border-radius:1vw;
     width:fit-content;
     padding:.5vw 1.3vw;
+}
+.hidden{
+    display:none;
 }
 /* ==== Header ==== */
 .header{
@@ -138,10 +143,8 @@ button{
     border:2px solid black;
     border-bottom: 0;
 }
-#info-displayed{
-    display:none;
-}
-#info-displayed.active{
+
+.active{
     display:block;
 }
 

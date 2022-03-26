@@ -6,17 +6,17 @@ const typeStat = document.getElementById("types")
 const heightStat= document.getElementById("height")
 const speciesStat = document.getElementById("species")
 const infoBlock = document.getElementById("info-displayed")
+const temporalInfoBlock = document.getElementById("temporal-info")
 
 
 const fetchPokemon = () => {
     let pokemon= nameInput.value.toLowerCase()
     let url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
-    changeImage("img/loading.gif")
+    loading()
     fetch(url)
         .then(response => {
             if (response.status != 200) {
-                changeImage("img/Error.gif")
-                infoBlock.classList.remove("active")
+                notFound()
             }
             else {
                 return response.json()
@@ -42,6 +42,7 @@ function changeData(information) {
     });
     heightStat.innerHTML = `<b>Height: </b>${information.height} dm`
     infoBlock.classList.add("active")
+    temporalInfoBlock.classList.remove("active")
 }
 
 function changeImage(url) {
@@ -64,4 +65,19 @@ function createTag(block, content) {
 function deleteTags(block) {
     let tags = [...block.getElementsByClassName("tag")]
     tags.forEach(tag => { tag.remove() })
+}
+
+function loading() {
+    temporalInfoBlock.textContent = "Loading..."
+    temporalInfoBlock.classList.add("active")
+    infoBlock.classList.remove("active")
+    nameStat.textContent="Loading..."
+    changeImage("img/loading.gif")
+}
+
+function notFound() {
+    changeImage("img/Error.gif")
+    infoBlock.classList.remove("active")
+    nameStat.textContent = "Please try again!"
+    temporalInfoBlock.textContent="It seems your Pokemon could not be found, please try again with another name or ID"
 }

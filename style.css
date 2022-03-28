@@ -50,6 +50,9 @@ button{
     border-radius:1vw;
     width:fit-content;
     padding:.5vw 1.3vw;
+    margin:.2vw;
+    font-size:.8em;
+    display:inline-block;
 }
 .hidden{
     display:none;
@@ -135,8 +138,10 @@ button{
 }
 #name{
     text-align: center;
-    text-transform: capitalize;
     font-weight: 700;
+}
+#name,#species{
+    text-transform: capitalize;
 }
 .nombre{
     border-radius:1vw 1vw 0 0;
